@@ -5,7 +5,7 @@
 * [How_to_run_the_application](#How-to-run-the-application)
  
 
-###About-the-project
+##About-the-project
 
 This project was implemented as part of the Udacity Front-End Developer Nanodegree.  
 
