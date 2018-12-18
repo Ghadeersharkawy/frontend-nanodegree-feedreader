@@ -93,8 +93,8 @@ $(function() {
                
              });
              it('there is at least a single entry element',function(){
-                 const feeds = document.querySelector('.feed');
-                 expect(feeds.children.length).toBeGreaterThan(0);
+                 const feeds = document.querySelectorAll('.feed .entry-link');
+                 expect(feeds.length).toBeGreaterThan(0);
              });
          });
         
@@ -111,15 +111,12 @@ $(function() {
          beforeEach(function(done){
             loadFeed(0,function(){
                 feed1 = document.querySelector('.feed').innerHTML;
-               done(); 
-               });  
-
-              loadFeed(1,function(){
+               loadFeed(1,function(){
                 feed2 = document.querySelector('.feed').innerHTML;
                 done(); 
               });  
              });
-              
+             }); 
          it('content changes',function(){
             expect(feed1).not.toEqual(feed2);
          });
